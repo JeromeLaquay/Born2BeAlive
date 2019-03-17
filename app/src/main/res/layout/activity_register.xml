@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    >
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/logo_bornetobealive"/>
+
+    <TextView
+        android:id="@+id/InscriptionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Inscription"
+        android:layout_below="@id/imageView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/colorPrimaryMarron"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editFirstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="prénom"
+        android:inputType="textPersonName"
+    android:layout_below="@id/InscriptionTitle"/>
+
+    <EditText
+        android:id="@+id/editLastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="nom"
+        android:inputType="textPersonName"
+    android:layout_below="@id/editFirstname"/>
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textWebEmailAddress"
+        android:layout_below="@id/editLastname"
+        />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="mot de passe"
+        android:inputType="textPassword"
+        android:layout_below="@id/editEmail"
+        />
+
+    <Button
+        android:id="@+id/inscBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button"
+        android:text="S'inscrire"
+        android:textColor="@android:color/background_light"
+    android:layout_below="@id/editPassword"/>
+
+    <Button
+        android:id="@+id/connectBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button"
+        android:text="Connexion"
+        android:textColor="@android:color/background_light"
+        android:layout_below="@id/inscBtn"/>
+
+</RelativeLayout>

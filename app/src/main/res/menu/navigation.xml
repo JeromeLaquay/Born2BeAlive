@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
-            android:id="@+id/navigation_profil"
-            android:icon="@drawable/account"
+            android:id="@+id/navigation_home"
+            android:icon="@drawable/home_icon_silhouette"
             android:title="Accueil" />
-
     <item
-            android:id="@+id/navigation_todolist"
-            android:icon="@drawable/format_list_numbers"
+            android:id="@+id/navigation_res_car"
+            android:icon="@drawable/car"
             android:title="Réservation véhicule" />
-
     <item
-            android:id="@+id/navigation_note_taking"
-            android:icon="@drawable/note_text"
+            android:id="@+id/navigation_res_station"
+            android:icon="@drawable/electric_station"
             android:title="Réservation borne" />
-
     <item
-            android:id="@+id/navigation_photo"
-            android:icon="@drawable/camera"
+            android:id="@+id/navigation_profile"
+            android:icon="@drawable/account"
             android:title="Profil" />
 
 </menu>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <Button
+            android:id="@+id/reservation"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button"
+            android:text="Mes réservations"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+    />
+
+    <Button
+            android:id="@+id/preferences"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button"
+            android:text="Mes préférences"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/reservation"
+            android:layout_marginTop="10dp"
+    />
+
+    <Button
+            android:id="@+id/informations"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button"
+            android:text="Mes informations"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/preferences"
+    />
+
+
+</RelativeLayout>

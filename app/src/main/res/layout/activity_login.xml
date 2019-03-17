@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/logo_bornetobealive"/>
+
+    <TextView
+            android:id="@+id/connectTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Connexion"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorPrimaryGreen"
+            android:textSize="30sp" />
+
+
+    <EditText
+        android:id="@+id/emailTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connectTxt"
+        android:ems="10"
+        android:hint="email"
+        android:layout_margin="10dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/passwordTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTxt"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="mot de passe"
+        android:inputType="textPassword"
+         />
+
+    <Button
+        android:id="@+id/connexionBtn"
+        android:layout_width="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordTxt"
+        android:background="@drawable/button"
+        android:text="se connecter"
+        android:textColor="@color/colorPrimary"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/inscriptionBtn"
+        android:layout_width="match_parent"
+        android:layout_below="@id/connexionBtn"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="s'inscrire"
+        android:textColor="@color/colorPrimary" />
+
+
+
+</RelativeLayout>
