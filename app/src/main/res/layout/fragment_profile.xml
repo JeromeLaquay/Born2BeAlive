@@ -6,15 +6,41 @@
     >
 
     <Button
-            android:id="@+id/reservation"
+            android:id="@+id/reservationCar"
             android:layout_width="316dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button"
-            android:text="Mes réservations"
+            android:text="Mes réservations de véhicules"
             android:textColor="@color/colorPrimary"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="20dp"
+    />
+
+    <Button
+            android:id="@+id/reservationStation"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button"
+            android:text="Mes réservations de bornes"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/reservationCar"
+    />
+
+    <Button
+            android:id="@+id/vehicule"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button"
+            android:text="Mes Véhicules"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/reservationStation"
     />
 
     <Button
@@ -26,7 +52,7 @@
             android:text="Mes préférences"
             android:textColor="@color/colorPrimary"
             android:layout_marginBottom="10dp"
-            android:layout_below="@+id/reservation"
+            android:layout_below="@+id/vehicule"
             android:layout_marginTop="10dp"
     />
 

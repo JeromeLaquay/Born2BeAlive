@@ -1,4 +1,4 @@
-package com.example.born2bealive
+package com.example.born2bealive.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,11 +6,17 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.support.design.widget.BottomNavigationView
+import com.example.born2bealive.R
+import com.example.born2bealive.fragments.HomeFragment
+import com.example.born2bealive.fragments.ProfileFragment
+import com.example.born2bealive.fragments.ReservationCarFragment
+import com.example.born2bealive.fragments.ReservationStationFragment
 
-class BottomMenuActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+
+
+class BottomMenuActivity() : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +32,9 @@ class BottomMenuActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         loadFragment(HomeFragment())
     }
 
+
     fun loadFragment(fragment: Fragment?): Boolean {
+
         if (fragment != null) {
 
             supportFragmentManager

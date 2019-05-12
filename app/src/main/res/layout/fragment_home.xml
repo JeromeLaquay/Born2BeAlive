@@ -60,17 +60,6 @@
                     android:text="Allez dans l'onglet Réservation de véhicules
 Choisissez l'heure de début de réservation, le nombre d'heures nécessaire pour votre déplacement, le nombre de kilomètres que vous allez parcourir . Ensuite l'application va en déduire les véhicules disponibles et adaptés à votre déplacement.
 Veuillez penser à réserver une borne lors de votre retour pour les utilisateurs suivants."/>
-            <Button
-                    android:id="@+id/buttonCar"
-                    android:layout_width="316dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/mailModifMail"
-                    android:layout_centerHorizontal="true"
-                    android:background="@drawable/button"
-                    android:text="Réserver un véhicule"
-                    android:textColor="@color/colorPrimary"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                     android:id="@+id/titleStation"
@@ -94,19 +83,7 @@ Veuillez penser à réserver une borne lors de votre retour pour les utilisateur
                     android:gravity="center"
                     android:text="Allez dans l'onglet Réservation de bornes de rechargement. Choisissez l'heure de début de réservation, le type de véhicule à recharger, l'autonomie restante en arrivant . Ensuite l'application estimera le temps nécessaire à la charge complète. Vous pourrez noter le nombre d'heures à réserver. Veuillez ne pas utiliser abusivement les bornes et bouger son véhicule pour les suivants."/>
 
-            <Button
-                    android:id="@+id/buttonStation"
-                    android:layout_width="316dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/mailModifMail"
-                    android:layout_centerHorizontal="true"
-                    android:background="@drawable/button"
-                    android:text="Réserver une borne"
-                    android:textColor="@color/colorPrimary"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginBottom="20dp"
-            />
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

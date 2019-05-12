@@ -1,12 +1,379 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="NoteTaking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            android:id="@+id/titleCar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:textSize="25dp"
+            android:text="Réservation de borne de rechargement"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryGreen"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+    />
+
+
+    <ScrollView android:id="@+id/scrollview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/titleCar"
+                android:layout_above="@id/btnResCar">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <android.support.v7.widget.CardView android:id="@+id/cardDate"
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                app:cardBackgroundColor="@color/colorTransparent"
+                                                android:layout_marginHorizontal="10dp"
+            >
+                <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:textSize="15dp"
+                        android:text="Choisissez la date de réservation:"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"/>
+
+                <DatePicker
+                        android:id="@+id/simpleDatePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:datePickerMode="spinner"
+                        android:calendarViewShown="false"
+                        android:headerBackground="@color/colorPrimaryGreen"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView android:id="@+id/cardTime"
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/cardDate"
+                                                android:layout_marginTop="10dp"
+                                                app:cardBackgroundColor="@color/colorTransparent"
+                                                android:layout_marginHorizontal="10dp"
+            >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:id="@+id/textTime"
+                        android:textSize="15dp"
+                        android:text="Choisissez l'heure de début de réservation:"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/simpleDatePicker"/>
+
+                <TimePicker android:layout_width="wrap_content"
+                            android:layout_height="180dp"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:id="@+id/timePicker"
+                            android:layout_below="@id/textTime"
+                            android:timePickerMode="spinner"
+                            android:headerBackground="@color/colorPrimaryGreen"
+                            android:scrollbarSize="0dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                ></TimePicker>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView android:id="@+id/typeCar"
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/cardTime"
+                                                android:layout_marginTop="10dp"
+                                                app:cardBackgroundColor="@color/colorTransparent"
+                                                android:layout_marginHorizontal="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:text="Votre véhicule :"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:id="@+id/textTypeCar"
+                        android:layout_margin="5dp" android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/cardKm" android:layout_alignParentStart="true" android:layout_marginStart="10dp"/>
+
+                <android.support.v7.widget.CardView android:id="@+id/cardSpinnerTypeCar"
+
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="50dp"
+                                                    app:cardBackgroundColor="@color/colorPrimary"
+                                                    android:layout_marginTop="45dp"
+                                                    android:layout_marginHorizontal="40dp"
+                                                    android:layout_marginBottom="10dp">
+                    <Spinner
+                            android:id="@+id/spinner1TypeCar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:entries="@array/car_arrays"
+                            android:gravity="center"
+                            android:prompt="@string/country_prompt"
+                    />
+                </android.support.v7.widget.CardView>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView android:id="@+id/cardAutonomy"
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="50dp"
+                                                android:layout_below="@+id/typeCar"
+                                                android:layout_marginTop="10dp"
+                                                app:cardBackgroundColor="@color/colorTransparent"
+                                                android:layout_marginHorizontal="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:numeric="integer"
+                        android:textSize="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="50 %"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@+id/km"/>
+                <Button
+                        android:id="@+id/buttonMinusKm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="8dp"
+                        android:onClick="setDate"
+                        android:background="@drawable/button"
+                        android:drawableLeft="@mipmap/minus"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginLeft="80dp"
+                        android:text=""
+                        android:layout_toEndOf="@+id/km" />
+                <Button
+                        android:id="@+id/buttonPlusKm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="8dp"
+                        android:onClick="setDate"
+                        android:background="@drawable/button"
+                        android:drawableLeft="@mipmap/add"
+                        android:text=""
+                        android:layout_marginLeft="120dp"
+                        android:layout_toEndOf="@+id/buttonMinusKm"
+                        android:layout_marginTop="9dp" />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:text="Autonomie restante estimée en arrivant"
+                        android:textSize="15sp"
+                        android:gravity="left|center_vertical"
+                        android:id="@+id/resKm"
+                        android:layout_marginLeft="155dp" android:layout_alignParentEnd="true"
+                        android:singleLine="false"
+                />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView android:id="@+id/cardEstimationHour"
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="50dp"
+                                                android:layout_below="@+id/cardAutonomy"
+                                                android:layout_marginTop="10dp"
+                                                app:cardBackgroundColor="@color/colorTransparent"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginBottom="2dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryGreen"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@+id/estimation"
+                        android:layout_below="@+id/cardSpinnerCar"
+                        android:layout_marginLeft="20dp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:text="Heures estimées pour charge complète"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:id="@+id/textEstimation"
+                        android:layout_marginLeft="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/cardSpinnerCar"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView android:id="@+id/cardHour"
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="50dp"
+                                                android:layout_below="@+id/cardAutonomy"
+                                                android:layout_marginTop="10dp"
+                                                app:cardBackgroundColor="@color/colorTransparent"
+                                                android:layout_marginHorizontal="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:text="0"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:id="@+id/numberHour"  android:layout_below="@+id/timePicker"/>
+                <Button
+                        android:id="@+id/buttonMinusHour"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="8dp"
+                        android:onClick="setDate"
+                        android:background="@drawable/button"
+                        android:drawableLeft="@mipmap/minus"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginLeft="80dp"
+                        android:text=""
+                        android:layout_toEndOf="@+id/numberHour" android:layout_below="@+id/timePicker"/>
+                <Button
+                        android:id="@+id/buttonPlusHour"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="8dp"
+                        android:onClick="setDate"
+                        android:background="@drawable/button"
+                        android:drawableLeft="@mipmap/add"
+                        android:text=""
+                        android:layout_marginLeft="120dp"
+                        android:layout_toEndOf="@+id/buttonMinusHour"
+                        android:layout_marginTop="9dp" android:layout_below="@+id/timePicker"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:text="Nombre d'heures à réserver"
+                        android:textSize="15dp"
+                        android:gravity="center_vertical"
+                        android:id="@+id/resHour"
+                        android:layout_marginTop="0dp" android:layout_marginLeft="155dp" android:layout_below="@+id/timePicker" android:layout_alignParentEnd="true"
+                />
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+            <android.support.v7.widget.CardView android:id="@+id/cardCar"
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/cardKm"
+                                                android:layout_marginTop="10dp"
+                                                app:cardBackgroundColor="@color/colorTransparent"
+                                                android:layout_marginHorizontal="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:text="Véhicules disponibles correspondant à vos critères :"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:id="@+id/textChooseCar"
+                        android:layout_margin="5dp" android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/cardKm" android:layout_alignParentStart="true" android:layout_marginStart="10dp"/>
+
+                <android.support.v7.widget.CardView android:id="@+id/cardSpinnerCar"
+
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="50dp"
+                                                    app:cardBackgroundColor="@color/colorPrimary"
+                                                    android:layout_marginTop="45dp"
+                                                    android:layout_marginHorizontal="40dp"
+                                                    android:layout_marginBottom="10dp">
+                    <Spinner
+                            android:id="@+id/spinner1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:entries="@array/car_arrays"
+                            android:gravity="center"
+                            android:prompt="@string/country_prompt"
+                    />
+                </android.support.v7.widget.CardView>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView android:id="@+id/cardborne"
+
+                                                android:layout_width="match_parent"
+                                                android:layout_height="50dp"
+                                                android:layout_below="@+id/cardCar"
+                                                android:layout_marginTop="10dp"
+                                                app:cardBackgroundColor="@color/colorTransparent"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginBottom="2dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:text="se trouve à la borne :"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:id="@+id/textStation"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/cardSpinnerCar"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryGreen"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@+id/station"
+                        android:layout_below="@+id/cardSpinnerCar"
+                        android:layout_marginLeft="145dp"/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/btnResCar"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="Réserver le véhicule"
+            android:textColor="@color/colorPrimary" />
+
 </RelativeLayout>

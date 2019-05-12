@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".activities.LoginActivity"
     >
 
     <ImageView
@@ -29,12 +29,12 @@
 
 
     <EditText
-        android:id="@+id/emailTxt"
+        android:id="@+id/usernameTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/connectTxt"
         android:ems="10"
-        android:hint="email"
+        android:hint="username"
         android:layout_margin="10dp"
         android:inputType="textEmailAddress" />
 
@@ -42,7 +42,7 @@
         android:id="@+id/passwordTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/emailTxt"
+        android:layout_below="@id/usernameTxt"
         android:layout_margin="10dp"
         android:ems="10"
         android:hint="mot de passe"
