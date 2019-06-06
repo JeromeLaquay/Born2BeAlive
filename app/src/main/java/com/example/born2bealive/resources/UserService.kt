@@ -11,7 +11,10 @@ public interface UserService{
     fun login(@Field("username") username : String, @Field("password") password : String,@Field("grant_type") grant_type : String): Call<UserToken>
 
 
-    @POST("springjwt/register")
+    @POST("api/register")
     fun register(@Body user : User): Call<User>
+
+    @GET("api/users/current")
+    fun currentUser(): Call<User>
 
 }

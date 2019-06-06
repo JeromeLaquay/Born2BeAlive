@@ -1,7 +1,7 @@
 <resources>
 
 <string name="app_name">Born2BeAlive</string>
-<string name="country_prompt">Choisissez Une voiture</string>
+<string name="choose_car">Choisissez Une voiture</string>
 
     <string-array name="car_arrays">
         <item>Choisissez le véhicule</item>
@@ -9,5 +9,6 @@
         <item>BMW i5    36-MLQ-12</item>
         <item>Tesla     15-PEN-03</item>
     </string-array>
+
 
 </resources>

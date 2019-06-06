@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@mipmap/logo_bornetobealive"/>
+        android:layout_marginTop="70dp"
+        android:src="@drawable/gas_station2"/>
 
     <TextView
             android:id="@+id/connectTxt"

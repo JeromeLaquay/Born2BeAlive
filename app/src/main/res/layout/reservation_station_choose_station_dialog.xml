@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/dialog"
+>
+
+    <TextView
+            android:id="@+id/TitleChooseCar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Choisissez le véhicule"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorPrimary"
+        android:background="@color/colorPrimaryGreen"/>
+
+    <LinearLayout android:id="@+id/cardborne"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                  android:layout_marginHorizontal="10dp"
+                  android:background="@drawable/card"
+                android:gravity="center"
+              android:orientation="vertical">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="date de début :"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:id="@+id/dateDebutTxt"
+                android:layout_alignParentStart="true"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="2019-06-01 20:12"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/dateStart"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="date de fin :"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:id="@+id/dateEndTxt"
+                android:layout_alignParentStart="true"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="2019-06-01 20:12"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/dateEnd"/>
+
+        <LinearLayout android:id="@+id/cardCar"
+
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="10dp"
+                      android:background="@color/colorTransparent"
+                      android:gravity="center"
+                      android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="véhicule choisi : "
+                android:textSize="15dp"
+                android:gravity="center"
+                android:id="@+id/carChoose"
+                android:layout_alignParentStart="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Renault Zoé AZ-059-PA"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/carChooseText"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/cardTypeCharge"
+
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="10dp"
+                      android:background="@color/colorTransparent"
+                      android:gravity="center"
+                      android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Type de charge choisi : "
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:id="@+id/typeCharge"
+                    android:layout_alignParentStart="true"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="22 KW/h"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/typeChargeText"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/cardStation"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/cardborne"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="vertical"
+                  android:background="@drawable/card"
+                                        android:layout_marginHorizontal="10dp">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Stations disponibles correspondant à vos critères :"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:id="@+id/textChooseCar"
+                android:layout_marginHorizontal="10dp" android:layout_marginTop="10dp" />
+
+        <android.support.v7.widget.CardView android:id="@+id/cardSpinnerCar"
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            app:cardBackgroundColor="@color/colorPrimary"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginHorizontal="20dp"
+                                            android:layout_marginBottom="10dp"
+        >
+            <Spinner
+                    android:id="@+id/spinnerStation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/car_arrays"
+                    android:gravity="center"
+                    android:prompt="@string/choose_car"
+            />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="10dp">
+        <Button
+                android:id="@+id/dialogCancelBtn"
+                android:text="Cancel"
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10dp"
+        />
+        <Button
+                android:id="@+id/dialogReserveBtn"
+                android:text="Réserver la borne"
+                android:layout_width="140dp"
+                android:textSize="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/button"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

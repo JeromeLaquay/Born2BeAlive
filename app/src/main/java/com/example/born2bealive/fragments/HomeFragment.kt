@@ -22,5 +22,4 @@ class HomeFragment : Fragment() {
         return view
     }
 
-
 }

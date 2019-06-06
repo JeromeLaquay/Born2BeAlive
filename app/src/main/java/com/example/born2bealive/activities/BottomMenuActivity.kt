@@ -16,7 +16,7 @@ import com.example.born2bealive.fragments.ReservationStationFragment
 
 
 
-class BottomMenuActivity() : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class BottomMenuActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,9 +25,10 @@ class BottomMenuActivity() : AppCompatActivity(), BottomNavigationView.OnNavigat
         val navigation = findViewById<BottomNavigationView>(R.id.navigation)
         navigation.setOnNavigationItemSelectedListener(this)
 
-        supportActionBar!!.setDisplayShowHomeEnabled(true)
-        supportActionBar!!.setLogo(R.mipmap.logo_bornetobealive)
-        supportActionBar!!.setDisplayUseLogoEnabled(true)
+        /*supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar!!.setLogo(R.drawable.gas_station)
+        supportActionBar!!.setDisplayUseLogoEnabled(true)*/
+        supportActionBar!!.hide()
 
         loadFragment(HomeFragment())
     }

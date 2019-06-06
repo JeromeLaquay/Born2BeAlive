@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.example.born2bealive.R
 import com.example.born2bealive.entities.User
-import com.example.born2bealive.entities.UserToken
 import com.example.born2bealive.resources.RetrofitFactory
 import kotlinx.android.synthetic.main.activity_register.*
 import retrofit2.Call
@@ -24,7 +23,7 @@ class RegisterActivity : AppCompatActivity() {
 
 
         inscBtn.setOnClickListener {
-            user = User("","","","","","","")
+            user = User()
             user.username=editUsername.text.toString()
             user.firstName=editFirstname.text.toString()
             user.lastName=editLastname.text.toString()
@@ -32,6 +31,7 @@ class RegisterActivity : AppCompatActivity() {
             user.badge=editBadge.text.toString()
             user.password=editPassword.text.toString()
             user.confirmPassword=editPasswordConfirm.text.toString()
+
 
             if(user.username == "" || user.firstName == "" || user.lastName == "" || user.email == "" || user.badge == "" || user.password == "" || user.confirmPassword == "" ){
                 Toast.makeText(this@RegisterActivity, "Veuillez remplir tous les champs !", Toast.LENGTH_LONG).show()

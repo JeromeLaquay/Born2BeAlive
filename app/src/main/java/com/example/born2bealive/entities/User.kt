@@ -2,7 +2,7 @@ package com.example.born2bealive.entities
 
 data class User (
 
-    var id: Integer,
+    var id: Int,
     var username: String,
     var password: String,
     var firstName: String,
@@ -11,4 +11,6 @@ data class User (
     var email: String,
     var confirmPassword: String
 
-)
+){
+    constructor() : this(-1,"","","","","","","")
+}

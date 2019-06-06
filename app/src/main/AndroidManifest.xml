@@ -9,8 +9,8 @@
     <application
             android:allowBackup="true"
             android:label="@string/app_name"
-            android:logo="@mipmap/logo_bornetobealive"
-            android:roundIcon="@mipmap/logo_bornetobealive"
+            android:logo="@drawable/gas_station2"
+            android:roundIcon="@drawable/gas_station2"
             android:supportsRtl="true"
             android:usesCleartextTraffic="true"
             android:theme="@style/AppTheme">
@@ -26,6 +26,8 @@
         <activity android:name=".activities.MainActivity"/>
         <activity android:name=".activities.RegisterActivity"/>
         <activity android:name=".activities.BottomMenuActivity"/>
+        <activity android:name=".activities.MyReservationCarActivity"/>
+        <activity android:name=".activities.MyReservationStationActivity"/>
     </application>
 
 </manifest>
